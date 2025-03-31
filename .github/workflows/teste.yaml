@@ -8,13 +8,21 @@ env:
 jobs:
   primeiro:
     runs-on: ubuntu-latest
+    env:
+      variavel_primeiro_job: "primeiro job"
     steps:
       - name: imprimir
         run: |
           echo global=${{ env.variavel_global }}
+          echo primeiro_job=${{ env.variavel_primeiro_job }}
+          echo segundo_job=${{ env.variavel_segundo_job }}
   segundo:
     runs-on: ubuntu-latest
+    env:
+      variavel_segundo_job: "segundo job"
     steps:
       - name: imprimir
         run: |
           echo global=${{ env.variavel_global }}
+          echo primeiro_job=${{ env.variavel_primeiro_job }}
+          echo segundo_job=${{ env.variavel_segundo_job }}
