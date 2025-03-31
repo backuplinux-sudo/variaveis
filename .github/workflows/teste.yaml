@@ -11,4 +11,4 @@ jobs:
         run: |
           echo runner=${{ runner.os }}
           echo workflow=${{ github.workflow }}
-          echo env=${{ github.env }}
+          echo commit=${{ github.sha }}
