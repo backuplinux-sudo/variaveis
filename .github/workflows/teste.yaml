@@ -4,21 +4,25 @@ on: push
 
 env:
   variavel_global: "valor global"
+  variavel_teste: "global"
 
 jobs:
   primeiro:
     runs-on: ubuntu-latest
     env:
       variavel_primeiro_job: "primeiro job"
+      variavel_teste: "job"
     steps:
       - name: imprimir
         env:
           variavel_step: "step"
+          variavel_teste: "step"
         run: |
           echo global=${{ env.variavel_global }}
           echo primeiro_job=${{ env.variavel_primeiro_job }}
           echo segundo_job=${{ env.variavel_segundo_job }}
           echo step=${{ env.variavel_step }}
+          echo teste=${{ env.variavel_teste }}
       - name: teste variável step
         run: |
           echo global=${{ env.variavel_global }}
