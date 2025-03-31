@@ -12,3 +12,5 @@ jobs:
           echo runner=${{ runner.os }}
           echo workflow=${{ github.workflow }}
           echo commit=${{ github.sha }}
+          echo repositorio_env=${{ env.variavel_repositorio }}
+          echo repositorio_vars=${{ vars.variavel_repositorio }}
