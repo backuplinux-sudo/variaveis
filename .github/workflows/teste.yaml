@@ -2,17 +2,13 @@ name: Teste
 
 on: push
 
-env:
-  variavel_global: "valor global"
-  variavel_teste_prioridade: "global"
 
 jobs:
   primeiro:
     runs-on: ubuntu-latest
-    env:
-      variavel_primeiro_job: "primeiro job"
-      variavel_teste_prioridade: "job"
     steps:
       - name: imprimir
         run: |
-          echo prioridade=${{ env.variavel_teste_prioridade }}
+          echo runner=${{ runner.os }}
+          echo workflow=${{ github.workflow }}
+          echo env=${{ github.env }}
