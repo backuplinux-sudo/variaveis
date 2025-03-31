@@ -3,7 +3,8 @@ name: Teste
 on: push
 
 env:
-    variavel_global: "123"
+  variavel_global: "123"
+  teste var: teste
 
 jobs:
   primeiro:
@@ -15,6 +16,7 @@ jobs:
         run: |
           echo teste=$teste
           echo teste_env=${{ env.teste }}
+          echo teste_var=${{ env.teste var }}
   segundo:
     runs-on: ubuntu-latest
     steps:
