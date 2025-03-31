@@ -1,0 +1,15 @@
+name: Teste
+
+on: push
+
+env:
+    teste: "123"
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: testando
+              run: |
+                echo teste=$teste
+                echo teste_env=${{ env.teste }}
