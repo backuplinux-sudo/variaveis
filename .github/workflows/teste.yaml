@@ -14,8 +14,5 @@ jobs:
       variavel_teste_prioridade: "job"
     steps:
       - name: imprimir
-        env:
-          variavel_step: "step"
-          variavel_teste_prioridade: "step"
         run: |
           echo prioridade=${{ env.variavel_teste_prioridade }}
