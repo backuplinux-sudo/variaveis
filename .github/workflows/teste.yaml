@@ -3,13 +3,20 @@ name: Teste
 on: push
 
 env:
-    teste: "123"
+    variavel_global: "123"
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: testando
-              run: |
-                echo teste=$teste
-                echo teste_env=${{ env.teste }}
+  primeiro:
+    runs-on: ubuntu-latest
+    steps:
+      - name: imprimir
+        env:
+          teste: 123
+        run: |
+          echo teste=$teste
+          echo teste_env=${{ env.teste }}
+  segundo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: imprimir
+        run: |
