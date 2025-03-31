@@ -11,9 +11,10 @@ jobs:
     steps:
       - name: imprimir
         run: |
-          echo teste_env=${{ env.variavel_global }}
-  # segundo:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: imprimir
-  #       run: |
+          echo global=${{ env.variavel_global }}
+  segundo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: imprimir
+        run: |
+          echo global=${{ env.variavel_global }}
