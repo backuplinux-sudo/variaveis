@@ -12,3 +12,4 @@ jobs:
           echo repositorio_env=${{ env.variavel_repositorio }}
           echo repositorio_vars=${{ vars.variavel_repositorio }}
           echo repositorio_vars_maiusculo=${{ vars.VARIAVEL_REPOSITORIO }}
+          echo teste=${{ vars.VaRiAveL_RepOsiTorIo }}
