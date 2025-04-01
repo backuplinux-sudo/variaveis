@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: desenvolvimento
     steps:
-      - uses: actions/checkout@v4
-      - name: Gerar arquivo
+      - name: Rodar comandos AWS
         shell: bash
         run: |
-          cat config.yaml
-    
+          echo url=${{ vars.url }}
+          # comando ec2
+          # comando route 53
