@@ -12,4 +12,4 @@ jobs:
       - name: imprimir
         run: |
           echo usuario=${{ vars.usuario }}
-          echo senha=${{ secrets.senha }}
+          echo senha='${{ secrets.senha }}'
