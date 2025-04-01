@@ -5,6 +5,8 @@ on: push
 
 jobs:
   primeiro:
+    env:
+      teste: "funciona"
     runs-on: ubuntu-latest
     steps:
       - name: imprimir
@@ -13,3 +15,4 @@ jobs:
           echo repositorio_vars=${{ vars.variavel_repositorio }}
           echo repositorio_vars_maiusculo=${{ vars.VARIAVEL_REPOSITORIO }}
           echo teste=${{ vars.VaRiAveL_RepOsiTorIo }}
+          echo env=${{ env.TEsTe }}
