@@ -1,0 +1,15 @@
+name: Deploy
+
+on: push
+
+jobs:
+  deploy_desenvolvimento:
+    runs-on: ubuntu-latest
+    environment: desenvolvimento
+    steps:
+      - uses: action/checkout@v4
+      - name: Gerar arquivo
+        shell: bash
+        run: |
+          cat config.yaml
+    
