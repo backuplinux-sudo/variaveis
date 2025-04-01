@@ -11,9 +11,5 @@ jobs:
     steps:
       - name: imprimir
         run: |
-          echo repositorio_env=${{ env.variavel_repositorio }}
-          echo repositorio_vars=${{ vars.variavel_repositorio }}
-          echo repositorio_vars_maiusculo=${{ vars.VARIAVEL_REPOSITORIO }}
-          echo teste=${{ vars.VaRiAveL_RepOsiTorIo }}
-          echo env_variado=${{ env.TEsTe }}
-          echo env_minusculo=${{ env.teste }}
+          echo usuario=${{ vars.usuario }}
+          echo senha=${{ secrets.senha }}
