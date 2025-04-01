@@ -10,6 +10,6 @@ jobs:
       - name: Rodar comandos AWS
         shell: bash
         run: |
-          echo url=${{ vars.url }}
+          echo url=${{ vars.link }}
           # comando ec2
           # comando route 53
