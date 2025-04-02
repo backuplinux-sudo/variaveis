@@ -10,8 +10,7 @@ jobs:
       - name: Rodar comandos AWS
         shell: bash
         run: |
-          # echo << EOF >> teste_${{ job.deploy_desenvolvimento.environment }}.yaml
+          echo << EOF >> teste_desenvolvimento.yaml
+            lalala
 
-          # EOF
-
-          echo environment_job=${{ job.deploy_desenvolvimento.environment }}
+          EOF
