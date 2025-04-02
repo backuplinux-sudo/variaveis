@@ -10,8 +10,8 @@ jobs:
       - name: Rodar comandos AWS
         shell: bash
         run: |
-          echo << EOF >> teste_desenvolvimento.yaml
-            lalala
+          cat << EOF >> teste_desenvolvimento.yaml
+          lalala
 
           EOF
           ls
