@@ -22,6 +22,7 @@ jobs:
           EOF
 
           cat config_desenvolvimento.yaml
+          # outro commit
 
   deploy_producao:
     runs-on: ubuntu-latest
