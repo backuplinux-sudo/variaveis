@@ -11,9 +11,13 @@ jobs:
         shell: bash
         run: |
           cat << EOF >> teste_desenvolvimento.yaml
-          lalala
+          instance: m5a.xlarge # dica: m5a.large para dev
+          url: ${{ vars.url }}
+          tags:
+            name: site-${{ matrix.environment }}
+            enrironment: ${{ matrix.environment }}
 
           EOF
-          ls
+
 
           cat teste_desenvolvimento.yaml
