@@ -14,5 +14,4 @@ jobs:
 
           # EOF
 
-          echo environment_jobs=${{ jobs.deploy_desenvolvimento.environment }}
           echo environment_job=${{ job.deploy_desenvolvimento.environment }}
