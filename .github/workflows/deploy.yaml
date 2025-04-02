@@ -18,6 +18,9 @@ jobs:
             environment: desenvolvimento
 
           EOF
+
+          cat config_desenvolvimento.yaml
+
   deploy_producao:
     runs-on: ubuntu-latest
     environment: producao
@@ -33,3 +36,5 @@ jobs:
             environment: producao
 
           EOF
+
+          cat config_producao.yaml
