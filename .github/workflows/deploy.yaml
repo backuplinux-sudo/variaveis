@@ -12,10 +12,7 @@ jobs:
         run: |
           cat << EOF >> teste_desenvolvimento.yaml
           instance: m5a.xlarge # dica: m5a.large para dev
-          url: ${{ vars.url }}
-          tags:
-            name: site-${{ matrix.environment }}
-            enrironment: ${{ matrix.environment }}
+          url: ${{ vars.link }}
 
           EOF
 
