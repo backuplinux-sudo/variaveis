@@ -7,14 +7,29 @@ jobs:
     runs-on: ubuntu-latest
     environment: desenvolvimento
     steps:
-      - name: Rodar comandos AWS
+      - name: Gerar arquivo
         shell: bash
         run: |
-          cat << EOF >> teste_desenvolvimento.yaml
-          instance: m5a.xlarge # dica: m5a.large para dev
+          cat << EOF >> config_desenvolvimento.yaml
+          maquina: ${{ vars.maquina }}
           url: ${{ vars.link }}
+          tags:
+            name: site-agendamentos
+            environment: desenvolvimento
 
           EOF
+  deploy_producao:
+    runs-on: ubuntu-latest
+    environment: producao
+    steps:
+      - name: Gerar arquivo
+        shell: bash
+        run: |
+          cat << EOF >> config_producao.yaml
+          maquina: ${{ vars.maquina }}
+          url: ${{ vars.link }}
+          tags:
+            name: site-agendamentos
+            environment: producao
 
-
-          cat teste_desenvolvimento.yaml
+          EOF
