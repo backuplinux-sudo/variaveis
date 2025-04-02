@@ -42,12 +42,4 @@ jobs:
           EOF
 
           cat config_producao.yaml
-  
-  sem_environment:
-    runs-on: ubuntu-latest
-    steps:
-      - name: teste sem environment
-        shell: bash
-        run: |
-          echo usuario=${{ vars.usuario }}
-          echo centro_custo=${{ vars.centro_custo }}
+
