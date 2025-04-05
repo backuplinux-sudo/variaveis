@@ -5,6 +5,12 @@ on:
     inputs:
       fruta:
         required: true
+        type: choice
+        options:
+          - abacaxi
+          - morango
+          - pitanga
+          - goiaba
 
 jobs:
   teste_input:
