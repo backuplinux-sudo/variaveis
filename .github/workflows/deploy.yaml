@@ -11,6 +11,7 @@ on:
           - morango
           - pitanga
           - goiaba
+        default: pitanga
 
 jobs:
   teste_input:
