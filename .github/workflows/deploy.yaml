@@ -1,44 +1,57 @@
 name: Deploy
 
-on: push
+on:
+  workflow_dispatch:
+    inputs:
+      fruta:
+        description: "nome da fruta escolhida"
+        required: true
+        default: morango
+
 
 jobs:
-  deploy_desenvolvimento:
+  teste_input:
     runs-on: ubuntu-latest
-    environment: desenvolvimento
     steps:
-      - name: Gerar arquivo
-        shell: bash
+      - name: imprimir inputs
         run: |
-          cat << EOF >> config_desenvolvimento.yaml
-          maquina: ${{ vars.maquina }}
-          url: ${{ vars.link }}
-          tags:
-            name: site-agendamentos
-            environment: desenvolvimento
-            usuario: ${{ vars.usuario }}
-            centro_custo: ${{ vars.centro_custo }}
+          aaa
+  # deploy_desenvolvimento:
+  #   runs-on: ubuntu-latest
+  #   environment: desenvolvimento
+  #   steps:
+  #     - name: Gerar arquivo
+  #       shell: bash
+  #       run: |
+  #         cat << EOF >> config_desenvolvimento.yaml
+  #         maquina: ${{ vars.maquina }}
+  #         url: ${{ vars.link }}
+  #         tags:
+  #           name: site-agendamentos
+  #           environment: desenvolvimento
+  #           usuario: ${{ vars.usuario }}
+  #           centro_custo: ${{ vars.centro_custo }}
 
-          EOF
+  #         EOF
 
-          cat config_desenvolvimento.yaml
+  #         cat config_desenvolvimento.yaml
 
-  deploy_producao:
-    runs-on: ubuntu-latest
-    environment: producao
-    steps:
-      - name: Gerar arquivo
-        shell: bash
-        run: |
-          cat << EOF >> config_producao.yaml
-          maquina: ${{ vars.maquina }}
-          url: ${{ vars.link }}
-          tags:
-            name: site-agendamentos
-            environment: producao
-            usuario: ${{ vars.usuario }}
-            centro_custo: ${{ vars.centro_custo }}
+  # deploy_producao:
+  #   runs-on: ubuntu-latest
+  #   environment: producao
+  #   steps:
+  #     - name: Gerar arquivo
+  #       shell: bash
+  #       run: |
+  #         cat << EOF >> config_producao.yaml
+  #         maquina: ${{ vars.maquina }}
+  #         url: ${{ vars.link }}
+  #         tags:
+  #           name: site-agendamentos
+  #           environment: producao
+  #           usuario: ${{ vars.usuario }}
+  #           centro_custo: ${{ vars.centro_custo }}
 
-          EOF
+  #         EOF
 
-          cat config_producao.yaml
+  #         cat config_producao.yaml
