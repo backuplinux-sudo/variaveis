@@ -4,10 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       fruta:
-        description: "nome da fruta escolhida"
         required: true
-        default: morango
-
 
 jobs:
   teste_input:
