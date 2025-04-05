@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: imprimir inputs
         run: |
-          aaa
+          echo fruta=${{ inputs.fruta }}
   # deploy_desenvolvimento:
   #   runs-on: ubuntu-latest
   #   environment: desenvolvimento
