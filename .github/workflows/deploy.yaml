@@ -25,7 +25,7 @@ jobs:
         run: |
           echo "Pode ir em sabores de frutas vermelhas"
       - name: teste failure
-        if: failure()
+        if: always() # failure()
         run: echo "executou mesmo com falha"
   condicional:
     runs-on: ubuntu-latest
