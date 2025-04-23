@@ -24,3 +24,9 @@ jobs:
         if: ${{ inputs.fruta != 'abacaxi' }}
         run: |
           echo "Pode ir em sabores de frutas vermelhas"
+  condicional:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.fruta == 'abacaxi' }}
+    steps:
+      - name: cor
+        run: echo "Essa é uma fruta amarela"
