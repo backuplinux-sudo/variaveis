@@ -20,6 +20,7 @@ jobs:
       - name: imprimir inputs
         run: |
           echo fruta=${{ inputs.fruta }}
+          exit 1
       - name: frutas vermelhas
         if: ${{ inputs.fruta != 'abacaxi' }}
         run: |
