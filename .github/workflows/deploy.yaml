@@ -20,10 +20,14 @@ jobs:
       - name: imprimir inputs
         run: |
           echo fruta=${{ inputs.fruta }}
+          exit 1
       - name: frutas vermelhas
         if: ${{ inputs.fruta != 'abacaxi' }}
         run: |
           echo "Pode ir em sabores de frutas vermelhas"
+      - name: teste
+        if: failure()
+        run: echo "executou mesmo com falha"
   condicional:
     runs-on: ubuntu-latest
     if: ${{ inputs.fruta == 'abacaxi' }}
