@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: imprimir inputs
+        continue-on-error: true
         run: |
           echo fruta=${{ inputs.fruta }}
           exit 1
@@ -25,9 +26,6 @@ jobs:
         if: ${{ inputs.fruta != 'abacaxi' }}
         run: |
           echo "Pode ir em sabores de frutas vermelhas"
-      - name: teste failure
-        if: always() # failure()
-        run: echo "executou mesmo com falha"
   condicional:
     runs-on: ubuntu-latest
     if: ${{ inputs.fruta == 'abacaxi' }}
