@@ -15,10 +15,10 @@ on:
 
 jobs:
   teste_input:
+    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - name: imprimir inputs
-        continue-on-error: true
         run: |
           echo fruta=${{ inputs.fruta }}
           exit 1
