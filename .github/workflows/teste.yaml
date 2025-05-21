@@ -16,3 +16,8 @@ jobs:
     secrets:
       usuario: teste
       senha: teste
+
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ secrets.senha }}
