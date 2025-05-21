@@ -14,3 +14,6 @@ jobs:
           echo usuario=${{ vars.usuario }}
           echo senha="${{ secrets.senha }}" >> teste.txt
           cat teste.txt
+      - uses: backuplinux-sudo/reutilizaveis/.github/workflows/acesso.yaml@main
+        with:
+          site: google.com
