@@ -4,16 +4,7 @@ on: workflow_dispatch
 
 
 jobs:
-  deploy_desenvolvimento:
-    env:
-      teste: "funciona"
-    runs-on: ubuntu-latest
-    steps:
-      - name: imprimir
-        run: |
-          echo usuario=${{ vars.usuario }}
-          echo senha="${{ secrets.senha }}" >> teste.txt
-          cat teste.txt
-      - uses: backuplinux-sudo/reutilizaveis/.github/workflows/acesso.yaml@main
-        with:
-          site: google.com
+  usando_curl:
+    uses: backuplinux-sudo/reutilizaveis/.github/workflows/acesso.yaml@main
+    with:
+      site: google.com
