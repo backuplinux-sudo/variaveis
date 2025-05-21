@@ -15,9 +15,4 @@ jobs:
       site: ${{ inputs.site }}
     secrets:
       usuario: teste
-      senha: teste
-
-  teste:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo ${{ secrets.teste }}
+      senha: ${{ secrets.teste }}
