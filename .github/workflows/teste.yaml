@@ -14,5 +14,5 @@ jobs:
     with:
       site: ${{ inputs.site }}
     secrets:
-      usuario: ${{ vars.usuario }}
-      senha: ${{ secrets.senha }}
+      usuario: teste
+      senha: teste
