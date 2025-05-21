@@ -13,6 +13,4 @@ jobs:
     uses: backuplinux-sudo/reutilizaveis/.github/workflows/acesso.yaml@main
     with:
       site: ${{ inputs.site }}
-    secrets:
-      usuario: ${{ vars.usuario }}
-      senha: ${{ secrets.teste }}
+    secrets: inherit
