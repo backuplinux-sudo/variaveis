@@ -1,10 +1,15 @@
 name: Teste
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      site:
+        required: true
+        type: string
 
 
 jobs:
   usando_curl:
     uses: backuplinux-sudo/reutilizaveis/.github/workflows/acesso.yaml@main
     with:
-      site: google.com
+      site: ${{ inputs.site }}
