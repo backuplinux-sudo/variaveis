@@ -14,3 +14,9 @@ jobs:
     with:
       site: ${{ inputs.site }}
     secrets: inherit
+  
+  outputs:
+    needs: usando_curl
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "A saída é ${{ needs.usando_curl.outputs.saida }}"
