@@ -19,4 +19,4 @@ jobs:
     needs: usando_curl
     runs-on: ubuntu-latest
     steps:
-      - run: echo "A saída é ${{ needs.usando_curl.outputs.saida }}"
+      - run: echo "A retorno foi ${{ needs.usando_curl.outputs.codigo_retorno }}"
