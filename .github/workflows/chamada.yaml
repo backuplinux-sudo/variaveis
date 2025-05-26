@@ -7,4 +7,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: backuplinux-sudo/action-instalacoes@main
+        with:
+          workflow: ${{ github.workflow }}
 
