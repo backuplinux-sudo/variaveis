@@ -16,10 +16,10 @@ jobs:
         id: code
         with:
           site: ${{ inputs.site }}
-      - run: echo "O status code do site ${{ inputs.site }} foi ${{ steps.code.outputs.codigo_retorno }}"
+      - run: echo "O status code do site ${{ inputs.site }} foi ${{ steps.code.outputs.STATUS_CODE }}"
 
   # outputs:
   #   needs: usando_curl
   #   runs-on: ubuntu-latest
   #   steps:
-  #     - run: echo "A retorno foi ${{ needs.usando_curl.outputs.codigo_retorno }}"
+  #     - run: echo "A retorno foi ${{ needs.usando_curl.outputs.STATUS_CODE }}"
