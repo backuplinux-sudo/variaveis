@@ -13,8 +13,7 @@ jobs:
     uses: backuplinux-sudo/action_status_code@main
     with:
       site: ${{ inputs.site }}
-    secrets: inherit
-  
+
   # outputs:
   #   needs: usando_curl
   #   runs-on: ubuntu-latest
