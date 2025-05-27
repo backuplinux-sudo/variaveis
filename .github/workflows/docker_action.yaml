@@ -13,8 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: backuplinux-sudo/action_status_code@main
+        id: code
         with:
           site: ${{ inputs.site }}
+      - run: echo "O status code do site ${{ inputs.site }} foi ${{ steps.code.outputs.codigo_retorno }}"
 
   # outputs:
   #   needs: usando_curl
