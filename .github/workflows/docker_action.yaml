@@ -1,0 +1,22 @@
+name: Chamada docker action
+
+on: 
+  workflow_dispatch:
+    inputs:
+      site:
+        required: true
+        type: string
+
+
+jobs:
+  usando_curl:
+    uses: backuplinux-sudo/action_status_code@main
+    with:
+      site: ${{ inputs.site }}
+    secrets: inherit
+  
+  # outputs:
+  #   needs: usando_curl
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: echo "A retorno foi ${{ needs.usando_curl.outputs.codigo_retorno }}"
