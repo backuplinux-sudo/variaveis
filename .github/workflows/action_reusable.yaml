@@ -6,7 +6,7 @@ jobs:
   teste:
     runs-on: windows-latest
     steps:
-      - uses: backuplinux-sudo/reutilizaveis/.github/actions/instalacoes/
+      - uses: backuplinux-sudo/reutilizaveis/.github/actions/instalacoes/action.yaml@main
         with:
           workflow: ${{ github.workflow }}
 
