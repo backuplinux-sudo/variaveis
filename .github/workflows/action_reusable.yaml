@@ -1,0 +1,12 @@
+name: Chamada action reusable
+
+on: workflow_dispatch
+
+jobs:
+  teste:
+    runs-on: windows-latest
+    steps:
+      - uses: backuplinux-sudo/reutilizaveis/.github/actions/instalacoes.yaml@main
+        with:
+          workflow: ${{ github.workflow }}
+
