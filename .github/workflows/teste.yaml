@@ -18,4 +18,6 @@ jobs:
   outputs:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "branch=${{ github.ref }}"
+      - run: |
+          echo "ref=${{ github.ref }}"
+          echo "base_ref=${{ github.base_ref }}"
