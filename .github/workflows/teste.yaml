@@ -15,4 +15,4 @@ jobs:
   outputs:
     runs-on: ubuntu-latest
     steps:
-      - uses: backuplinux-sudo/variaveis/.github/actions/verifica_branch@main
+      - uses: backuplinux-sudo/action-teste@main
