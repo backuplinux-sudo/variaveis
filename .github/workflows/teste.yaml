@@ -16,3 +16,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: backuplinux-sudo/action-teste@main
+        with:
+          branch: ${{ github.head_ref }}
