@@ -21,12 +21,14 @@ jobs:
           echo "head_ref=${{ github.head_ref }}"
           echo "ref_name=${{ github.ref_name }}"
 
+          nome_branch="${{ github.head_ref }}"
+
           prefixos_branch=("bug-" "projeto-")
           for prefixo in "${prefixos_branch[@]}"; do
             echo "Verificando o prefixo: ${prefixo}"
             echo "prefixos_branch=${prefixos_branch[@]}"
 
-            if [[ "${{ github.head_ref }}" ~= "${prefixo}" ]]; then
+            if [[ "${nome_branch}" ~= "${prefixo}" ]]; then
               echo "A branch tem o prefixo válido: ${prefixo}"
             else
               echo "A branch não possui o prefixo válido: ${prefixo}"
