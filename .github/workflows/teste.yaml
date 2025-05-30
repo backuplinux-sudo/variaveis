@@ -13,6 +13,8 @@ jobs:
   #   secrets: inherit
   
   outputs:
+    env:
+      prefixos_branch: ("bug-" "projeto-")
     runs-on: ubuntu-latest
     steps:
       - run: |
@@ -21,8 +23,9 @@ jobs:
           echo "head_ref=${{ github.head_ref }}"
           echo "ref_name=${{ github.ref_name }}"
 
-          if [[ "${{ github.head_ref }}" == bug-* ]]; then
-            echo "A branch começa com 'bug-'"
-          else
-            echo "A branch não começa com 'bug-'"
-          fi
+          for prefixo in "${prefixos_branch[@]}"; do
+            if [[ "${{ github.head_ref }}" == "${prefixo}" ]]; then
+              echo "A branch tem o prefixo válido: ${prefixo}"
+            else
+              echo "A branch não possui o prefixo válido: ${prefixo}"
+            fi
