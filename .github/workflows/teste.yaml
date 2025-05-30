@@ -20,3 +20,9 @@ jobs:
           echo "base_ref=${{ github.base_ref }}"
           echo "head_ref=${{ github.head_ref }}"
           echo "ref_name=${{ github.ref_name }}"
+
+          if [[ "${{ github.head_ref }}" == bug-* ]]; then
+            echo "A branch começa com 'bug-'"
+          else
+            echo "A branch não começa com 'bug-'"
+          fi
