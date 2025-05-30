@@ -1,4 +1,4 @@
-name: Chamada action reusable
+name: Chamada action compartilhada
 
 on: workflow_dispatch
 
