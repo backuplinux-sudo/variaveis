@@ -2,10 +2,7 @@ name: Teste
 
 on: 
   workflow_dispatch:
-    inputs:
-      site:
-        required: true
-        type: string
+  pull_request:
 
 
 jobs:
@@ -21,3 +18,5 @@ jobs:
       - run: |
           echo "ref=${{ github.ref }}"
           echo "base_ref=${{ github.base_ref }}"
+          echo "head_ref=${{ github.head_ref }}"
+          echo "ref_name=${{ github.ref_name }}"
