@@ -29,3 +29,4 @@ jobs:
             else
               echo "A branch não possui o prefixo válido: ${prefixo}"
             fi
+          done
