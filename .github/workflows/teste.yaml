@@ -28,7 +28,7 @@ jobs:
             echo "Verificando o prefixo: ${prefixo}"
             echo "prefixos_branch=${prefixos_branch[@]}"
 
-            if [[ "${nome_branch}" ~= "${prefixo}" ]]; then
+            if [[ "${nome_branch}" == "${prefixo}" ]]; then
               echo "A branch tem o prefixo válido: ${prefixo}"
             else
               echo "A branch não possui o prefixo válido: ${prefixo}"
