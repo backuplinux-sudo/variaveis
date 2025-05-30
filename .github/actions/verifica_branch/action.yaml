@@ -5,6 +5,6 @@ runs:
   using: docker
   image: app/Dockerfile
   # args: # Preciso do nome da branch na passagem?
-  #   - ${{ inputs.site }}
+  #   - ${{ inputs.site }} 
   args:
     - "['bug-', 'projeto-']"
