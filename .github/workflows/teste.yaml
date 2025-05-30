@@ -15,14 +15,4 @@ jobs:
   outputs:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "ref=${{ github.ref }}"
-          echo "base_ref=${{ github.base_ref }}"
-          echo "head_ref=${{ github.head_ref }}"
-          echo "ref_name=${{ github.ref_name }}"
-
-          if [[ "${{ github.head_ref }}" == bug-* ]]; then
-            echo "A branch começa com 'bug-'"
-          else
-            echo "A branch não começa com 'bug-'"
-          fi
+      - uses: backuplinux-sudo/variaveis/.github/actions/verifica_branch@main
