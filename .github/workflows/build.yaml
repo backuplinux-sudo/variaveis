@@ -31,4 +31,4 @@ jobs:
         shell: bash
         run: |
           sleep 10
-          curl -f http://localhost:8080/ | grep funcionando || exit 1
+          curl -f http://localhost:8080/ | grep funfando || exit 1
